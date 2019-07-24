@@ -17,7 +17,6 @@ export class EmployeeService {
     
     getEmployees():Observable<IEmployee[]>{
         return this.http.get('http://5d3720e886300e0014b64b3c.mockapi.io/api/v1/employees').map((response:Response)=><IEmployee[]>response)
-        
-        return 
     }
+     
 }
