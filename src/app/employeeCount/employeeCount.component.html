@@ -1,0 +1,18 @@
+--------------------------Child-----------------------------
+<p>
+  All : {{all}}
+  <input type="radio" name="options" value="All" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()" />
+</p>
+<p>
+  male : {{male}}
+  <input type="radio" name="options" value="Male" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>
+</p>
+<p>
+  female : {{female}}
+  <input type="radio" name="options" value="Female" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>
+</p>
+
+<button (click)="onHelloButtonPress()">Display Hello</button>
+
+<button (click)="onHiButtonPress()">Display Hi</button> 
+<br>

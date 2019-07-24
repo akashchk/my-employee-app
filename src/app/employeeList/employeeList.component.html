@@ -1,0 +1,30 @@
+<br>
+<app-employeeCount *ngIf="employees" [all]="getTotalEmployeesCount()"
+ [male]="getTotalMaleEmployeesCount()" 
+ [female]="getTotalFemaleEmployeesCount()"
+ (countRadioButtonSelectionChanged)="onEmployeeCountRadioButtonChange($event)"
+ (HelloButtonPressed)="onHelloPressed($event)"
+ (HiButtonPressed)="onHiPressed($event)"></app-employeeCount>
+
+
+<br>
+
+--------------------------Parent-----------------------------
+<table>
+  <tbody>
+    <ng-container *ngFor="let e of employees">
+        <tr *ngIf="selectedEmployeeCountRadioButton==e.gender || selectedEmployeeCountRadioButton==='All'" >
+            <td>{{e.code}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.gender}}</td>
+            <td>{{e.salary}}</td>
+          </tr>
+          <tr *ngIf="!employees" >
+            <td colspan=4>Loading Please wait...</td>
+             
+          </tr>
+    </ng-container>
+    
+  </tbody>
+</table>
+From Child : <span style='color:  red;'>{{message}}</span>
